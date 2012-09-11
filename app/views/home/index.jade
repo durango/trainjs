@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  .login
+    #error.msg.error.text-center
+    table
+      tr
+        td Username
+        td
+          input(type="text", name="username")
+      tr
+        td Password
+        td
+          input(type="password", name="password")
+      tr
+        td.text-right(colspan="2")
+          input#submit_login(type="submit", value="Login")
+  #ajax-loader

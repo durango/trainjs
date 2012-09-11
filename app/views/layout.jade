@@ -1,0 +1,20 @@
+doctype 5
+html
+  head
+    title hello
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(http-equiv='Content-Type', content='text/html', charset='utf-8')
+    link(href='/images/favicon.ico', type='image/ico', rel='shortcut icon')
+    script(type = 'text/javascript')
+      var controller = '!{settings.controller}';
+      var method = '!{settings.method}';
+    script(src = '/javascripts/jquery.js', type='text/javascript')
+  body
+    #header
+      | Header!
+    #wrapper
+      if (settings.flash)
+        if (settings.flash.msg)
+          p=settings.flash.msg
+      block content
+    block javascript

@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  form(action = '/register', method = 'post')
+    | username:
+    input(type = 'text', name = 'username')
+    br
+    | password:
+    input(type = 'text', name = 'password')
+    br
+    | email:
+    input(type = 'text', name = 'email')
+    br
+    | domain:
+    input(type = 'text', name = 'domain')
+    br
+    br
+    input(type = 'submit', value = 'Create')
